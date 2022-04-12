@@ -1,56 +1,52 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# To Do list
 
-> Description the project.
+This is a web site for to do list.
 
+# Screen Shots
+## Desktop Version
 
-## Built With
+![desktop](https://user-images.githubusercontent.com/49184579/161413491-98c037d3-d1e5-481f-a0b5-dfcf70089cb5.png)
 
-- Major languages
-- Frameworks
-- Technologies used
+## Mobile Version
 
-## Live Demo (if available)
+![mobile](https://user-images.githubusercontent.com/49184579/161413488-5f113e0e-e1d8-40cb-99d3-d4996c66ee99.png)
 
-[Live Demo Link](https://livedemo.com)
+## Built With &hearts;
 
+- HTML
+- CSS
+- JavaScript
+- Webpack
 
-## Getting Started
+## Live Demo
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+[Ckeckout The live Site here](https://aboongm.github.io/To-Do-List/)
 
 ### Prerequisites
+- Good knowledge on javascript objects
+- VSCode or other text editor installed. [Link to download VSCode](https://code.visualstudio.com/download)
+- Node package. [Link to download node](https://nodejs.org/en/download/)
+  
+## Getting started
 
-### Setup
+to run the project locally, clone the project using the command
 
-### Install
+`git clone git@github.com:aboongm/To-Do-List.git`
 
-### Usage
+### Run test
 
-### Run tests
-
-### Deployment
-
-
+navigate in to the project directory, from GitHub,
+to test or run the application double click on the `index.html` file to open in your browser
 
 ## Authors
 
-👤 **Author1**
+👤 **Ranjit Luwang**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@aboongm](https://github.com/aboongm)
+- Twitter: [@John_luang1](https://twitter.com/John_luang1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mayengbam-ranjit-luwang-31962418/)
 
 ## 🤝 Contributing
 
@@ -65,9 +61,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
+- Microverse program
+- My standup team
+- Microverse team
+- My family's support
