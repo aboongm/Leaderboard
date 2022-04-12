@@ -15,38 +15,3 @@ body {
 ul {
   list-style: none;
 }
-
-.icon {
-  background-color: transparent;
-  border: 0;
-  color: rgb(29, 29, 29);
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.m-width {
-  width: 90%;
-}
-
-.hide {
-  display: none;
-}
-
-.bg-yellow {
-  background-color: rgb(255, 254, 196);
-}
-
-input:focus {
-  outline: none;
-}
-
-span:focus {
-  outline: none;
-}
-
-.description {
-  background-color: transparent;
-  outline: none;
-  border: none;
-  margin-left: 20px;
-}
