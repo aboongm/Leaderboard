@@ -4,7 +4,6 @@ const scores = [];
 
 const refresh = () => {
   const scoreList = document.querySelector('.score-list');
-  const refresh = document.querySelector('#refresh');
   if (scores.length !== 0) {
     scoreList.innerHTML = '';
     scores.forEach((item) => {
@@ -17,7 +16,6 @@ const refresh = () => {
 };
 
 const addScore = () => {
-  const submit = document.querySelector('.submit');
   const form = document.querySelector('form');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
