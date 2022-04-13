@@ -1,5 +1,9 @@
 import './styles/style.css';
 import { addScore, refresh } from '../modules/addScore.js';
 
-addScore();
 refresh();
+addScore();
+
+document.getElementById('refresh').addEventListener('click', () => {
+  refresh();
+});
