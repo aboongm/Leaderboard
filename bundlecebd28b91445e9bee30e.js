@@ -2,6 +2,94 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./modules/addScore.js":
+/*!*****************************!*\
+  !*** ./modules/addScore.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "addScore": () => (/* binding */ addScore),
+/* harmony export */   "refresh": () => (/* binding */ refresh)
+/* harmony export */ });
+/* harmony import */ var _score_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./score.js */ "./modules/score.js");
+
+
+const apiURL =
+  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BTEFhqTCMyUgjyeM55mV/scores/';
+
+const fetchAPI = async () => {
+  const response = await fetch(apiURL);
+  const result = await response.json();
+  return result;
+};
+
+const postAPI = async (newScore) => {
+  const score = fetch(apiURL, {
+    method: 'POST',
+    body: JSON.stringify(newScore),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+  return score.json;
+};
+
+const refresh = async () => {
+  const scoreList = document.querySelector('.score-list');
+  const scores = await fetchAPI().then((result) => result);
+
+  if (scores.length !== 0) {
+    scoreList.innerHTML = '';
+    scores.result.forEach((item) => {
+      const score = `
+      <li class="h5 p-2 m-0 text-dark">${item.user}: ${item.score}</li>
+      `;
+      scoreList.insertAdjacentHTML('beforeend', score);
+    });
+  }
+};
+
+const addScore = () => {
+  const form = document.querySelector('form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const { user, score } = form.elements;
+    const newScore = new _score_js__WEBPACK_IMPORTED_MODULE_0__["default"](user.value, score.value);
+    await postAPI(newScore);
+    user.value = '';
+    score.value = '';
+  });
+};
+
+
+
+
+/***/ }),
+
+/***/ "./modules/score.js":
+/*!**************************!*\
+  !*** ./modules/score.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class Score {
+  constructor(user, score) {
+    this.user = user;
+    this.score = score;
+  }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Score);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/style.css":
 /*!***********************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/style.css ***!
@@ -21,7 +109,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  background: white;\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: normal;\n  line-height: 18px;\n}\n\nul {\n  list-style: none;\n}", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AACF;;AAEA;EACE,iBAAA;EACA,yCAAA;EACA,eAAA;EACA,mBAAA;EACA,iBAAA;AACF;;AAEA;EACE,gBAAA;AACF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  background: white;\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-size: 15px;\r\n  font-weight: normal;\r\n  line-height: 18px;\r\n}\r\n\r\nul {\r\n  list-style: none;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  background-image: linear-gradient(100deg, #e2c35d, #d88771);\n  /* background: white; */\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: normal;\n  line-height: 18px;\n}\n\nul {\n  list-style: none;\n}\n\nul.score-list > li:nth-of-type(odd) {\n  /* background: #e0e0e0; */\n  background: #e9d7d2;\n}\n\n.text-color {\n  color: #484848 !important;\n}", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AACF;;AAEA;EACE,2DAAA;EACA,uBAAA;EACA,yCAAA;EACA,eAAA;EACA,mBAAA;EACA,iBAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,yBAAA;EACA,mBAAA;AACF;;AAEA;EACE,yBAAA;AACF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  background-image: linear-gradient(100deg, #e2c35d, #d88771);\r\n  /* background: white; */\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-size: 15px;\r\n  font-weight: normal;\r\n  line-height: 18px;\r\n}\r\n\r\nul {\r\n  list-style: none;\r\n}\r\n\r\nul.score-list > li:nth-of-type(odd) {\r\n  /* background: #e0e0e0; */\r\n  background: #e9d7d2;\r\n}\r\n\r\n.text-color {\r\n  color: #484848 !important;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -606,10 +694,19 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
+/* harmony import */ var _modules_addScore_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/addScore.js */ "./modules/addScore.js");
 
+
+
+(0,_modules_addScore_js__WEBPACK_IMPORTED_MODULE_1__.refresh)();
+(0,_modules_addScore_js__WEBPACK_IMPORTED_MODULE_1__.addScore)();
+
+document.getElementById('refresh').addEventListener('click', () => {
+  (0,_modules_addScore_js__WEBPACK_IMPORTED_MODULE_1__.refresh)();
+});
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle56b7dd343cef3c368d40.js.map
+//# sourceMappingURL=bundlecebd28b91445e9bee30e.js.map
