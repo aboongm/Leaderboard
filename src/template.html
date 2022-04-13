@@ -17,32 +17,26 @@
   </head>
   <body>
     <main class="container-sm">
-      <h1 class="display-1 mt-5">Leaderboard</h1>
+      <h1 class="display-1 text-white mt-5">Leaderboard</h1>
       <div class="row scores-container p-3 ms-5">
         <div class="col scores pe-5">
-          <div class="d-flex align-items-center justify-content-between">
-            <h3 class="h1">Recent Scores</h3>
-            <button
-              type="button"
-              id="refresh"
-              class="btn h4 border-dark border-5"
-            >
+          <div class="d-flex mb-3 align-items-center justify-content-between">
+            <h3 class="h2 text-white">Recent Scores</h3>
+            <button type="button" id="refresh" class="btn btn-success shadow">
               Refresh
             </button>
           </div>
-          <ul
-            class="score-list border border-dark border-5 m-0 p-0 rounded"
-          ></ul>
+          <ul class="score-list border-warning border-1 m-0 p-0 rounded"></ul>
         </div>
         <div class="col add-scores px-5">
-          <h4 class="h1">Add your score</h4>
+          <h4 class="h2 mb-4 text-white">Add your score</h4>
           <form
             class="d-flex flex-column align-items-start justify-content-center"
           >
             <label for="user" class="display-5"></label>
             <input
               type="text"
-              class="h4 p-2 mb-4 w-100 border-dark border-5 rounded"
+              class="h5 p-2 mb-4 w-100 border-warning border-1 rounded text-muted"
               id="user"
               name="user"
               placeholder="Your name"
@@ -51,14 +45,14 @@
             <label for="score"></label>
             <input
               type="text"
-              class="h4 p-2 mb-4 w-100 border-dark border-5 rounded"
+              class="h5 p-2 mb-4 w-100 border-warning border-1 rounded text-muted"
               id="score"
               placeholder="Your score"
               required
             />
             <input
               type="submit"
-              class="submit h4 p-2 align-self-end border-dark border-5 rounded"
+              class="submit h4 p-2 btn btn-success align-self-end shadow"
               value="Submit"
             />
           </form>
