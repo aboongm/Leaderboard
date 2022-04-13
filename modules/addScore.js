@@ -2,6 +2,9 @@ import Score from './score.js';
 
 const scores = [];
 
+const apiURL =
+  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BTEFhqTCMyUgjyeM55mV/scores/';
+
 const refresh = () => {
   const scoreList = document.querySelector('.score-list');
   if (scores.length !== 0) {
