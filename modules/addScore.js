@@ -39,12 +39,11 @@ const refresh = async () => {
 
 const addScore = () => {
   const form = document.querySelector('form');
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const { player, score } = form.elements;
-    const newScore = new Score(player.value, score.value);
-    scores.push(newScore);
-    refresh();
+    const { user, score } = form.elements;
+    const newScore = new Score(user.value, score.value);
+    await postAPI(newScore);
   });
 };
 
