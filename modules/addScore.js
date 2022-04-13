@@ -5,6 +5,12 @@ const scores = [];
 const apiURL =
   'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BTEFhqTCMyUgjyeM55mV/scores/';
 
+const fetchAPI = async () => {
+  const response = await fetch(apiURL);
+  const result = await response.json();
+  return result;
+};
+
 const refresh = () => {
   const scoreList = document.querySelector('.score-list');
   if (scores.length !== 0) {
