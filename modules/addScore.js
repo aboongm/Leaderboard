@@ -11,6 +11,17 @@ const fetchAPI = async () => {
   return result;
 };
 
+const postAPI = async (newScore) => {
+  const score = fetch(apiURL, {
+    method: 'POST',
+    body: JSON.stringify(newScore),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+  return score.json;
+};
+
 const refresh = () => {
   const scoreList = document.querySelector('.score-list');
   if (scores.length !== 0) {
