@@ -44,6 +44,8 @@ const addScore = () => {
     const { user, score } = form.elements;
     const newScore = new Score(user.value, score.value);
     await postAPI(newScore);
+    user.value = '';
+    score.value = '';
   });
 };
 
