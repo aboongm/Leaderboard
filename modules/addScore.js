@@ -22,13 +22,15 @@ const postAPI = async (newScore) => {
   return score.json;
 };
 
-const refresh = () => {
+const refresh = async () => {
   const scoreList = document.querySelector('.score-list');
+  const scores = await fetchAPI().then((result) => result);
+
   if (scores.length !== 0) {
     scoreList.innerHTML = '';
-    scores.forEach((item) => {
+    scores.result.forEach((item) => {
       const score = `
-      <li class="h4 p-2 m-0">${item.player}: ${item.score}</li>
+      <li class="h4 p-2 m-0">${item.user}: ${item.score}</li>
       `;
       scoreList.insertAdjacentHTML('beforeend', score);
     });
