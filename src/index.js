@@ -4,6 +4,6 @@ import { addScore, refresh } from '../modules/addScore.js';
 refresh();
 addScore();
 
-document.getElementById('refresh').addEventListener('click', (e) => {
+document.getElementById('refresh').addEventListener('click', () => {
   refresh();
 });

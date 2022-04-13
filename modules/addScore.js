@@ -1,7 +1,5 @@
 import Score from './score.js';
 
-const scores = [];
-
 const apiURL =
   'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BTEFhqTCMyUgjyeM55mV/scores/';
 
