@@ -44,7 +44,7 @@ const refresh = async () => {
     scoreList.innerHTML = '';
     scores.result.forEach((item) => {
       const score = `
-      <li class="h5 p-2 m-0 text-dark">${item.user}: ${item.score}</li>
+      <li class="h5 p-2 m-0 text-color">${item.user}: ${item.score}</li>
       `;
       scoreList.insertAdjacentHTML('beforeend', score);
     });
@@ -109,7 +109,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  background-image: linear-gradient(100deg, #e2c35d, #d88771);\n  /* background: white; */\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: normal;\n  line-height: 18px;\n}\n\nul {\n  list-style: none;\n}\n\nul.score-list > li:nth-of-type(odd) {\n  /* background: #e0e0e0; */\n  background: #e9d7d2;\n}\n\n.text-color {\n  color: #484848 !important;\n}", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AACF;;AAEA;EACE,2DAAA;EACA,uBAAA;EACA,yCAAA;EACA,eAAA;EACA,mBAAA;EACA,iBAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,yBAAA;EACA,mBAAA;AACF;;AAEA;EACE,yBAAA;AACF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  background-image: linear-gradient(100deg, #e2c35d, #d88771);\r\n  /* background: white; */\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-size: 15px;\r\n  font-weight: normal;\r\n  line-height: 18px;\r\n}\r\n\r\nul {\r\n  list-style: none;\r\n}\r\n\r\nul.score-list > li:nth-of-type(odd) {\r\n  /* background: #e0e0e0; */\r\n  background: #e9d7d2;\r\n}\r\n\r\n.text-color {\r\n  color: #484848 !important;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  background-image: linear-gradient(100deg, #e2c35d, #d88771);\n  font-family: Arial, Helvetica, sans-serif;\n  font-size: 15px;\n  font-weight: normal;\n  line-height: 18px;\n}\n\nul {\n  list-style: none;\n}\n\nul.score-list > li:nth-of-type(odd) {\n  background: #e9d7d2;\n}\n\n.text-color {\n  color: #484848 !important;\n  font-size: 18px;\n  font-weight: normal;\n  text-transform: capitalize;\n  letter-spacing: 2px;\n}\n\n::placeholder {\n  color: #dbd9d9;\n  opacity: 1;\n}\n\n.btn {\n  font-size: 18px;\n  font-weight: 500;\n  letter-spacing: 2px;\n}", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AACF;;AAEA;EACE,2DAAA;EACA,yCAAA;EACA,eAAA;EACA,mBAAA;EACA,iBAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,mBAAA;AACF;;AAEA;EACE,yBAAA;EACA,eAAA;EACA,mBAAA;EACA,0BAAA;EACA,mBAAA;AACF;;AAEA;EACE,cAAA;EACA,UAAA;AACF;;AAEA;EACE,eAAA;EACA,gBAAA;EACA,mBAAA;AACF","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  background-image: linear-gradient(100deg, #e2c35d, #d88771);\r\n  font-family: Arial, Helvetica, sans-serif;\r\n  font-size: 15px;\r\n  font-weight: normal;\r\n  line-height: 18px;\r\n}\r\n\r\nul {\r\n  list-style: none;\r\n}\r\n\r\nul.score-list>li:nth-of-type(odd) {\r\n  background: #e9d7d2;\r\n}\r\n\r\n.text-color {\r\n  color: #484848 !important;\r\n  font-size: 18px;\r\n  font-weight: normal;\r\n  text-transform: capitalize;\r\n  letter-spacing: 2px;\r\n}\r\n\r\n::placeholder {\r\n  color: rgb(219, 217, 217);\r\n  opacity: 1;\r\n}\r\n\r\n.btn {\r\n  font-size: 18px;\r\n  font-weight: 500;\r\n  letter-spacing: 2px;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -709,4 +709,4 @@ document.getElementById('refresh').addEventListener('click', () => {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlecebd28b91445e9bee30e.js.map
+//# sourceMappingURL=bundledb6a828fe86f88ed250a.js.map

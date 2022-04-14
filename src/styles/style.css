@@ -16,10 +16,25 @@ ul {
   list-style: none;
 }
 
-ul.score-list > li:nth-of-type(odd) {
+ul.score-list>li:nth-of-type(odd) {
   background: #e9d7d2;
 }
 
 .text-color {
   color: #484848 !important;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+::placeholder {
+  color: rgb(219, 217, 217);
+  opacity: 1;
+}
+
+.btn {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }

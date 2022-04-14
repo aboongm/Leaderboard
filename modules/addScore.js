@@ -1,6 +1,7 @@
 import Score from './score.js';
 
-const apiURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BTEFhqTCMyUgjyeM55mV/scores/';
+const apiURL =
+  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/BTEFhqTCMyUgjyeM55mV/scores/';
 
 const fetchAPI = async () => {
   const response = await fetch(apiURL);
@@ -27,7 +28,7 @@ const refresh = async () => {
     scoreList.innerHTML = '';
     scores.result.forEach((item) => {
       const score = `
-      <li class="h5 p-2 m-0 text-dark">${item.user}: ${item.score}</li>
+      <li class="h5 p-2 m-0 text-color">${item.user}: ${item.score}</li>
       `;
       scoreList.insertAdjacentHTML('beforeend', score);
     });
