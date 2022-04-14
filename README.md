@@ -6,7 +6,7 @@ This is a web site for Leaderboard.
 
 # Screen Shots
 
-![desktop](https://user-images.githubusercontent.com/49184579/162966517-d665b5f3-c3d8-42ec-938b-9b424d531477.png)
+![desktop](https://user-images.githubusercontent.com/49184579/163168656-9383f81c-2457-4e70-a809-ac6f89ee334e.png)
 
 ## Built With &hearts;
 

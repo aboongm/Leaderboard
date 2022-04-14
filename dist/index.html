@@ -14,39 +14,50 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Leaderboard</title>
-  <script defer src="bundle56b7dd343cef3c368d40.js"></script></head>
+  <script defer src="bundledb6a828fe86f88ed250a.js"></script></head>
   <body>
-    <main class="container-sm d-flex flex-column mt-5 p-0 shadow">
-      <div
-        class="border-bottom ps-3 pe-4 d-flex flex-row align-items-center justify-content-between"
-      >
-        <div class="h5 py-3 m-0">Today's To Do</div>
-        <button type="button" id="refresh" class="icon">
-          <i class="fas fa-sync"></i>
-        </button>
+    <main class="container-sm">
+      <h1 class="display-1 text-white mt-5">Leaderboard</h1>
+      <div class="row scores-container p-3 ms-5">
+        <div class="col scores pe-5">
+          <div class="d-flex mb-3 align-items-center justify-content-between">
+            <h3 class="h2 text-white">Recent Scores</h3>
+            <button type="button" id="refresh" class="btn btn-success shadow">
+              Refresh
+            </button>
+          </div>
+          <ul class="score-list border-dark border-1 m-0 p-0 rounded"></ul>
+        </div>
+        <div class="col add-scores px-5">
+          <h4 class="h2 mb-4 text-white">Add your score</h4>
+          <form
+            class="d-flex flex-column align-items-start justify-content-center"
+          >
+            <label for="user" class="display-5"></label>
+            <input
+              type="text"
+              class="h5 p-2 mb-4 w-100 bg-secondary border-warning border-1 rounded text-white"
+              id="user"
+              name="user"
+              placeholder="Your name"
+              required
+            />
+            <label for="score"></label>
+            <input
+              type="text"
+              class="h5 p-2 mb-4 w-100 bg-secondary border-warning border-1 rounded text-white"
+              id="score"
+              placeholder="Your score"
+              required
+            />
+            <input
+              type="submit"
+              class="submit h4 p-2 btn btn-success align-self-end shadow"
+              value="Submit"
+            />
+          </form>
+        </div>
       </div>
-      <form
-        class="border-bottom ps-3 pe-4 d-flex flex-row align-items-center justify-content-between"
-      >
-        <input
-          type="text"
-          id="task"
-          name="task"
-          class="border-0 h5 text-muted fw-light py-3 m-0 fst-italic m-width"
-          placeholder="Add to your list..."
-        />
-        <button type="button" id="arrow-submit" class="icon">
-          <i class="fa-solid fa-arrow-turn-down"></i>
-        </button>
-      </form>
-      <div id="taskList" class="h5 p-0 m-0"></div>
-      <button
-        type="button"
-        id="clear-completed"
-        class="clear-completed w-100 bg-grey m-0 p-3 h5 text-muted fw-normal border-0"
-      >
-        Clear all completed
-      </button>
     </main>
   </body>
 </html>
