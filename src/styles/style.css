@@ -16,7 +16,7 @@ ul {
   list-style: none;
 }
 
-ul.score-list>li:nth-of-type(odd) {
+ul.score-list > li:nth-of-type(odd) {
   background: #e9d7d2;
 }
 
